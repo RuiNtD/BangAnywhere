@@ -1,0 +1,21 @@
+{
+  "name": "!bang Anywhere",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Use DuckDuckGo !bangs (almost) anywhere",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["redirect.js"],
+      "matches": [
+        "https://*.google.com/search?*",
+        "https://*.bing.com/search?*",
+        "https://search.brave.com/search?*",
+        "https://*.qwant.com/?*",
+        "https://*.startpage.com/*/search*"
+      ]
+    }
+  ]
+}
